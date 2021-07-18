@@ -1,3 +1,8 @@
+window.onload = function (){
+        document.body.innerHTML = '<div id="live2d" class="live2d">\n' +
+                        '\t<canvas id="live2dm" class="live2d" style="z-index: 999!important;"></canvas>\n' +
+                        '</div>'
+}
 function loadScript(src, callback) {
         var script = document.createElement('script'),
             head = document.getElementsByTagName('head')[0];
@@ -22,7 +27,7 @@ function loadScript(src, callback) {
         if (document.body.clientWidth > 600) {
             document.onreadystatechange = function () {
                 if (document.readyState == "complete") {
-                    loadScript('https://cdn.jsdelivr.net/combine/gh/lxjxll/lxj-oss@latest/pixi/pixi.min.js,gh/lxjxll/lxj-oss@latest/core/live2dcubismcore.min.js,gh/lxjxll/lxj-oss@latest/framework/live2dcubismframework.min.js,gh/lxjxll/lxj-oss@latest/framework/live2dcubismpixi.min.js,gh/lxjxll/lxj-oss@latest/load.min.js',function(){
+                    loadScript('https://cdn.jsdelivr.net/combine/npm/luxiaojie-oss@1.0.4/pixi.min.js,npm/luxiaojie-oss@1.0.4/live2dcubismcore.min.js,npm/luxiaojie-oss@1.0.4/live2dcubismframework.min.js,npm/luxiaojie-oss@1.0.4/live2dcubismpixi.min.js,npm/luxiaojie-oss@1.0.4/load.js',function(){
                         loadModel();
 })
                 }
